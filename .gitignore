@@ -1,9 +1,28 @@
-# rust build dir
-/target
-
 # configuration
 /.direnv
 /.vscode
 
 # nix build output
 /result
+
+# Go binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/bin/
+/dist/
+
+# go test / coverage
+*.test
+*.out
+coverage.html
+coverage.txt
+
+# go workspace (local only)
+go.work
+go.work.sum
+
+# dependency / build caches (if ever checked in by mistake)
+/vendor/
