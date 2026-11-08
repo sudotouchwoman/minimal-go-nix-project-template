@@ -20,8 +20,15 @@
       in
       {
         devShell = pkgs.mkShell {
-          buildInputs = [
-            pkgs.go_1_27
+          buildInputs = with pkgs; [
+            # build deps
+            go_1_27
+            buf
+
+            # lsp + debugging + linting
+            gopls
+            delve
+            golangci-lint
           ];
         };
       }
